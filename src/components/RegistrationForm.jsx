@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from 'react';
 import { typewriter } from '../utils/animations';
 
@@ -41,7 +40,7 @@ const RegistrationForm = () => {
       setErrors({ ...errors, [name]: null });
     }
     
-    // Show amount with typewriter effect when jersey option changes
+    // Show amount when jersey option changes
     if (name === 'jerseyOption' && value) {
       setShowAmount(true);
       
@@ -49,8 +48,7 @@ const RegistrationForm = () => {
       setTimeout(() => {
         if (paymentTextRef.current) {
           const amount = value === 'withoutJersey' ? '650 Taka' : '800 Taka';
-          const runTypewriter = typewriter(`Your payment amount: ${amount}`, 50);
-          runTypewriter(paymentTextRef.current);
+          paymentTextRef.current.textContent = `Your payment amount: ${amount}`;
         }
       }, 100);
     }
@@ -138,7 +136,7 @@ const RegistrationForm = () => {
   }, []);
   
   return (
-    <section className="py-16 bg-white" id="registration">
+    <section className="py-8 bg-white" id="registration">
       <div className="section-container">
         <div className="max-w-xl mx-auto">
           <div className="text-center mb-10">
@@ -281,10 +279,10 @@ const RegistrationForm = () => {
               </div>
               
               {showAmount && (
-                <div className="p-4 bg-gray-50 rounded-lg">
+                <div className="p-4 bg-gray-50 rounded-lg w-full overflow-x-auto">
                   <p 
                     ref={paymentTextRef} 
-                    className="font-medium text-sport-blue typewriter"
+                    className="font-medium text-sport-blue break-words"
                   ></p>
                 </div>
               )}

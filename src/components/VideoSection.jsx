@@ -29,7 +29,7 @@ const VideoSection = () => {
   }, []);
   
   return (
-    <section className="py-16 bg-white">
+    <section className="py-8 bg-white">
       <div className="section-container opacity-0" ref={sectionRef}>
         <h2 className="section-title text-center mb-12">Watch Our Event Highlight</h2>
         
