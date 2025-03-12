@@ -22,7 +22,7 @@ const Banner = () => {
         ref={bannerRef}
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url(https://images.unsplash.com/photo-1542903660-eedba2cda473?q=80&w=2070&auto=format&fit=crop)', 
+          backgroundImage: 'url(https://img.freepik.com/free-photo/healthy-lifestyle-running-outdoors_23-2151847293.jpg?t=st=1741775355~exp=1741778955~hmac=370c4d3de0dc26ae3e31d42e0dabcac1394bb6463bf22541fa68c29f06e2133d&w=1380)', 
           transform: 'scale(1.1)'
         }}
       ></div>
