@@ -78,13 +78,7 @@ const Navbar = () => {
                     <p className="text-xs text-gray-500 truncate">{user.email}</p>
                   </div>
                   <button
-                    onClick={() => navigateTo('/dashboard')}
-                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    User Dashboard
-                  </button>
-                  <button
-                    onClick={() => navigateTo('/admin-dashbord')}
+                    onClick={() => navigateTo('/admin-dashboard')}
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Admin Dashboard
