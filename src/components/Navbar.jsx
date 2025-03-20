@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import LoginModal from './LoginModal';
 import logo from '../images/logo.png';
 import { AuthContext } from './Provider/AuthProvider';
-import { UserCircle2, LogOut } from 'lucide-react';
+import { UserCircle2, LogOut, Ticket } from 'lucide-react';
 
 const Navbar = () => {
   const { user, signout } = useContext(AuthContext);
@@ -77,6 +77,13 @@ const Navbar = () => {
                     <p className="text-sm font-medium text-gray-900">{user.displayName}</p>
                     <p className="text-xs text-gray-500 truncate">{user.email}</p>
                   </div>
+                  <button
+                    onClick={() => navigateTo('/dashboard')}
+                    className="flex items-center w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <Ticket className="w-4 h-4 mr-2" />
+                    My Tickets
+                  </button>
                   <button
                     onClick={() => navigateTo('/admin-dashboard')}
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
